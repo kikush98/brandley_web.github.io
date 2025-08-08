@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-nect - Brand ↔ Creator Matching Platform</title>
+    <meta name="description" content="Connect brands with creators through intelligent matching. Co-nect is a complete brand-creator matching platform with AI-powered recommendations.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .feature-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold gradient-text">Co-nect</h1>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#features" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
+                        <a href="#technology" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Technology</a>
+                        <a href="#about" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="https://github.com/your-username/co-nect" class="bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    Connect Brands with 
+                    <span class="block">Creators</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
+                    Co-nect is a complete brand-creator matching platform powered by AI. 
+                    Find the perfect match for your next campaign.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#demo" class="bg-white text-purple-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-play mr-2"></i>View Demo
+                    </a>
+                    <a href="https://github.com/your-username/co-nect" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                        <i class="fab fa-github mr-2"></i>Source Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Powerful Features</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Everything you need to connect brands with the right creators
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-2xl feature-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">AI-Powered Matching</h3>
+                    <p class="text-gray-600">
+                        Advanced algorithm matches brands with creators based on audience, engagement, and brand fit.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-2xl feature-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Real-time Analytics</h3>
+                    <p class="text-gray-600">
+                        Track campaign performance, engagement rates, and ROI with comprehensive analytics.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-2xl feature-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Secure Authentication</h3>
+                    <p class="text-gray-600">
+                        AWS Cognito integration ensures secure user authentication and data protection.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-cloud text-2xl feature-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Serverless Architecture</h3>
+                    <p class="text-gray-600">
+                        Built on AWS Lambda, DynamoDB, and API Gateway for scalability and cost efficiency.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-2xl feature-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Responsive Design</h3>
+                    <p class="text-gray-600">
+                        Modern React frontend with beautiful UI that works on all devices.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-comments text-2xl feature-icon"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Integrated Chat</h3>
+                    <p class="text-gray-600">
+                        Built-in messaging system for seamless communication between brands and creators.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section id="technology" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Technology Stack</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Built with modern technologies for performance and scalability
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Frontend -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-react text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Frontend</h3>
+                    <p class="text-sm text-gray-600">React 19.1.0, Vite, Tailwind CSS</p>
+                </div>
+
+                <!-- Backend -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-aws text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Backend</h3>
+                    <p class="text-sm text-gray-600">AWS Lambda, DynamoDB, API Gateway</p>
+                </div>
+
+                <!-- Authentication -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lock text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Authentication</h3>
+                    <p class="text-sm text-gray-600">AWS Cognito, JWT Tokens</p>
+                </div>
+
+                <!-- Infrastructure -->
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cloud text-3xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Infrastructure</h3>
+                    <p class="text-sm text-gray-600">AWS CDK, CloudWatch, S3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">See It In Action</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Experience the platform with our interactive demo
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Key Features Demo</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Creator Dashboard</h4>
+                                <p class="text-gray-600">Track followers, engagement, and earnings in real-time</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Brand Matching</h4>
+                                <p class="text-gray-600">AI-powered algorithm finds perfect brand-creator matches</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Campaign Management</h4>
+                                <p class="text-gray-600">Track campaign performance and ROI analytics</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Secure Messaging</h4>
+                                <p class="text-gray-600">Built-in chat system for seamless communication</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="https://your-demo-url.com" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                            <i class="fas fa-external-link-alt mr-2"></i>Launch Demo
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-100 rounded-xl p-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="h-4 bg-gray-200 rounded w-3/4"></div>
+                            <div class="h-4 bg-gray-200 rounded w-1/2"></div>
+                            <div class="h-4 bg-gray-200 rounded w-5/6"></div>
+                            <div class="h-4 bg-gray-200 rounded w-2/3"></div>
+                        </div>
+                        <div class="mt-6 grid grid-cols-2 gap-4">
+                            <div class="bg-purple-100 rounded p-3">
+                                <div class="text-2xl font-bold text-purple-600">85K</div>
+                                <div class="text-sm text-gray-600">Followers</div>
+                            </div>
+                            <div class="bg-green-100 rounded p-3">
+                                <div class="text-2xl font-bold text-green-600">3.8%</div>
+                                <div class="text-sm text-gray-600">Engagement</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">About Co-nect</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A complete brand-creator matching platform designed to revolutionize influencer marketing
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">The Problem</h3>
+                    <p class="text-gray-600 mb-4">
+                        Finding the right creators for brand campaigns is time-consuming and often results in poor matches. 
+                        Traditional methods rely on manual research and gut feelings.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Brands struggle to find creators with the right audience demographics, engagement rates, and brand alignment. 
+                        Creators miss opportunities with brands that would be perfect for their content.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">The Solution</h3>
+                    <p class="text-gray-600">
+                        Co-nect uses advanced AI algorithms to match brands with creators based on multiple criteria including 
+                        audience demographics, engagement rates, content style, and brand values. The platform provides real-time 
+                        analytics and seamless communication tools.
+                    </p>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-users text-purple-600"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-900">For Brands</h4>
+                        </div>
+                        <p class="text-gray-600">Find creators with the perfect audience match, track campaign performance, and maximize ROI.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-star text-green-600"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-900">For Creators</h4>
+                        </div>
+                        <p class="text-gray-600">Connect with brands that align with your content, grow your audience, and increase earnings.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-line text-blue-600"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-900">Analytics & Insights</h4>
+                        </div>
+                        <p class="text-gray-600">Real-time data on engagement, audience growth, and campaign performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Ready to Get Started?</h2>
+            <p class="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">
+                Join the future of brand-creator partnerships. Deploy your own instance or contribute to the project.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://github.com/your-username/co-nect" class="bg-white text-purple-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
+                    <i class="fab fa-github mr-2"></i>View on GitHub
+                </a>
+                <a href="https://github.com/your-username/co-nect/blob/main/README.md" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                    <i class="fas fa-book mr-2"></i>Read Documentation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">Co-nect</h3>
+                    <p class="text-gray-400">
+                        Connecting brands with creators through intelligent matching and powerful analytics.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Features</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#features" class="hover:text-white transition-colors">AI Matching</a></li>
+                        <li><a href="#features" class="hover:text-white transition-colors">Analytics</a></li>
+                        <li><a href="#features" class="hover:text-white transition-colors">Authentication</a></li>
+                        <li><a href="#features" class="hover:text-white transition-colors">Chat System</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Technology</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#technology" class="hover:text-white transition-colors">React</a></li>
+                        <li><a href="#technology" class="hover:text-white transition-colors">AWS Lambda</a></li>
+                        <li><a href="#technology" class="hover:text-white transition-colors">DynamoDB</a></li>
+                        <li><a href="#technology" class="hover:text-white transition-colors">Cognito</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/your-username/co-nect" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Co-nect. Built with ❤️ for the creator economy.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
