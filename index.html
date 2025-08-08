@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Co-nect — Connect Brands with Top Creators</title>
+    <title>Brandley — Connect Brands with Top Creators</title>
     <meta name="description" content="The premier platform where brands discover authentic creators and influencers monetize their passion.">
     
     <!-- Tailwind CSS -->
@@ -137,7 +137,7 @@
         <nav class="py-4">
             <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 <div class="font-display text-2xl font-black text-blue-400 tracking-tight">
-                    <span class="transition-transform hover:scale-105">Co-nect</span>
+                    <span class="transition-transform hover:scale-105">Brandley</span>
                 </div>
 
                 <ul class="hidden md:flex items-center space-x-8">
@@ -208,10 +208,10 @@
             <div class="text-center space-y-16 slide-up">
                 <div class="space-y-4">
                     <h2 class="text-4xl md:text-5xl font-display font-bold text-blue-400">
-                        Why Choose Co-nect
+                        Why Choose Brandley
                     </h2>
                     <p class="text-xl text-blue-300 max-w-3xl mx-auto">
-                        Discover the features that make Co-nect the premier platform for authentic brand-creator partnerships
+                        Discover the features that make Brandley the premier platform for authentic brand-creator partnerships
                     </p>
                 </div>
 
@@ -354,7 +354,7 @@
                         Join the Waitlist
                     </h2>
                     <p class="text-xl text-blue-300 max-w-2xl mx-auto">
-                        Be among the first to experience Co-nect when we launch. Get early access and exclusive benefits.
+                        Be among the first to experience Brandley when we launch. Get early access and exclusive benefits.
                     </p>
                 </div>
 
@@ -386,7 +386,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
                 <div class="md:col-span-2 space-y-4">
-                    <h3 class="text-2xl font-display font-bold">Co-nect</h3>
+                    <h3 class="text-2xl font-display font-bold">Brandley</h3>
                     <p class="text-blue-100 max-w-md">
                         The premier platform where brands discover authentic creators and influencers monetize their passion.
                     </p>
@@ -413,7 +413,7 @@
 
             <div class="border-t border-navy-600 mt-12 pt-8 text-center">
                 <p class="text-blue-100">
-                    © 2024 Co-nect. All rights reserved.
+                    © 2024 Brandley. All rights reserved.
                 </p>
             </div>
         </div>
@@ -428,10 +428,10 @@
                 </svg>
             </div>
             <h2 class="text-3xl font-display font-bold text-blue-400 mb-4">
-                Welcome to Co-nect!
+                Welcome to Brandley!
             </h2>
             <p class="text-xl text-blue-300">
-                Thank you for your interest in Co-nect. We'll notify you as soon as we launch.
+                Thank you for your interest in Brandley. We'll notify you as soon as we launch.
             </p>
         </div>
     </div>
@@ -475,13 +475,13 @@
             // Simulate API call
             setTimeout(() => {
                 // Store in localStorage
-                const existingSignups = JSON.parse(localStorage.getItem('co-nect_waitlist') || '[]');
+                const existingSignups = JSON.parse(localStorage.getItem('brandley_waitlist') || '[]');
                 existingSignups.push({
                     email: email.trim(),
                     timestamp: new Date().toISOString(),
                     source: 'landing_page'
                 });
-                localStorage.setItem('co-nect_waitlist', JSON.stringify(existingSignups));
+                localStorage.setItem('brandley_waitlist', JSON.stringify(existingSignups));
                 
                 // Show success modal
                 document.getElementById('successModal').classList.remove('hidden');
