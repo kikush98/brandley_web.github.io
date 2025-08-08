@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Co-nect - Brand ↔ Creator Matching Platform</title>
     <meta name="description" content="Connect brands with creators through intelligent matching. Co-nect is a complete brand-creator matching platform with AI-powered recommendations.">
-    <!-- Updated for deployment -->
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,22 +13,108 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
+        :root {
+            --color-blue-400: #2F4059;
+            --color-blue-300: #51627B;
+            --color-blue-50: #FCFCFF;
+            --color-navy-500: #1a365d;
+            --color-navy-600: #0f2027;
+        }
+        
         body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .font-display {
             font-family: 'Inter', sans-serif;
         }
         
-        .gradient-bg {
+        .bg-gradient-blue {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
         
-        .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .bg-gradient-navy {
+            background: linear-gradient(135deg, #2F4059 0%, #51627B 100%);
+        }
+        
+        .text-blue-400 {
+            color: var(--color-blue-400);
+        }
+        
+        .text-blue-300 {
+            color: var(--color-blue-300);
+        }
+        
+        .bg-blue-50 {
+            background-color: var(--color-blue-50);
+        }
+        
+        .bg-navy-500 {
+            background-color: var(--color-navy-500);
+        }
+        
+        .bg-navy-600 {
+            background-color: var(--color-navy-600);
+        }
+        
+        .text-navy-500 {
+            color: var(--color-navy-500);
+        }
+        
+        .text-navy-600 {
+            color: var(--color-navy-600);
+        }
+        
+        .border-navy-500 {
+            border-color: var(--color-navy-500);
+        }
+        
+        .border-blue-200 {
+            border-color: #e2e8f0;
+        }
+        
+        .hover\:text-navy-600:hover {
+            color: var(--color-navy-600);
+        }
+        
+        .hover\:bg-navy-600:hover {
+            background-color: var(--color-navy-600);
+        }
+        
+        .hover\:border-navy-500:hover {
+            border-color: var(--color-navy-500);
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(120deg); }
+            66% { transform: translateY(10px) rotate(240deg); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(60px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         .card-hover {
@@ -41,50 +126,75 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
         
-        .feature-icon {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        section[id] {
+            scroll-margin-top: 80px;
         }
     </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <h1 class="text-2xl font-bold gradient-text">Co-nect</h1>
-                    </div>
+<body class="bg-blue-50">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md border-b border-transparent bg-white/95">
+        <nav class="py-4">
+            <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+                <div class="font-display text-2xl font-black text-blue-400 tracking-tight">
+                    <span class="transition-transform hover:scale-105">Co-nect</span>
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#features" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
-                        <a href="#technology" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Technology</a>
-                        <a href="#about" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-                    </div>
-                </div>
+
+                <ul class="hidden md:flex items-center space-x-8">
+                    <li>
+                        <a href="#features" class="text-blue-400 font-medium hover:text-navy-600 transition-colors relative group">
+                            Features
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-navy-600 transition-all duration-200 group-hover:w-full"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#technology" class="text-blue-400 font-medium hover:text-navy-600 transition-colors relative group">
+                            Technology
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-navy-600 transition-all duration-200 group-hover:w-full"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" class="text-blue-400 font-medium hover:text-navy-600 transition-colors relative group">
+                            About
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-navy-600 transition-all duration-200 group-hover:w-full"></span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <button class="bg-blue-400 text-blue-50 px-4 py-2 rounded-xl font-medium text-sm hover:bg-blue-300 transition-colors hover:scale-105">
+                    Demo Coming Soon
+                </button>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="gradient-bg text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-            <div class="text-center">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">
-                    Connect Brands with 
-                    <span class="block">Creators</span>
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
-                    Co-nect is a complete brand-creator matching platform powered by AI. 
-                    Find the perfect match for your next campaign.
-                </p>
+    <section class="relative min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center overflow-hidden">
+        <!-- Floating particles -->
+        <div class="absolute w-3 h-3 bg-navy-500 rounded-full opacity-20 floating" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="absolute w-3 h-3 bg-navy-500 rounded-full opacity-20 floating" style="top: 35%; left: 30%; animation-delay: 0.5s;"></div>
+        <div class="absolute w-3 h-3 bg-navy-500 rounded-full opacity-20 floating" style="top: 50%; left: 50%; animation-delay: 1s;"></div>
+        <div class="absolute w-3 h-3 bg-navy-500 rounded-full opacity-20 floating" style="top: 65%; left: 70%; animation-delay: 1.5s;"></div>
+        <div class="absolute w-3 h-3 bg-navy-500 rounded-full opacity-20 floating" style="top: 80%; left: 90%; animation-delay: 2s;"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="space-y-8 fade-in">
+                <div class="space-y-4">
+                    <h1 class="text-5xl md:text-7xl font-display font-bold text-blue-400 leading-tight">
+                        Connect Brands with
+                        <br />
+                        <span class="text-navy-500">Creators</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-blue-300 max-w-3xl mx-auto leading-relaxed">
+                        Co-nect is a complete brand-creator matching platform powered by AI. 
+                        Find the perfect match for your next campaign.
+                    </p>
+                </div>
+
                 <div class="flex justify-center">
-                    <button class="bg-white text-gray-400 px-8 py-4 rounded-lg text-lg font-semibold cursor-not-allowed" disabled>
-                        <i class="fas fa-clock mr-2"></i>Demo Coming Soon
+                    <button class="bg-navy-500 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all hover:bg-navy-600 hover:scale-105 inline-flex items-center space-x-2 cursor-not-allowed opacity-50">
+                        <span>Demo Coming Soon</span>
+                        <i class="fas fa-clock"></i>
                     </button>
                 </div>
             </div>
@@ -92,216 +202,196 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-24 bg-white">
+    <section id="features" class="py-20 bg-blue-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Powerful Features</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Everything you need to connect brands with the right creators
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
-                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-brain text-2xl feature-icon"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">AI-Powered Matching</h3>
-                    <p class="text-gray-600">
-                        Advanced algorithm matches brands with creators based on audience, engagement, and brand fit.
+            <div class="text-center space-y-16 slide-up">
+                <div class="space-y-4">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-blue-400">
+                        Why Choose Co-nect
+                    </h2>
+                    <p class="text-xl text-blue-300 max-w-3xl mx-auto">
+                        Discover the features that make Co-nect the premier platform for authentic brand-creator partnerships
                     </p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
-                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-chart-line text-2xl feature-icon"></i>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-blue-200 hover:shadow-lg transition-all duration-300 hover:border-navy-500 card-hover">
+                        <div class="text-4xl mb-4">🧠</div>
+                        <h3 class="text-xl font-semibold text-blue-400 mb-3">AI-Powered Matching</h3>
+                        <p class="text-blue-300 leading-relaxed">
+                            Advanced algorithm matches brands with creators based on audience, engagement, and brand fit.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Real-time Analytics</h3>
-                    <p class="text-gray-600">
-                        Track campaign performance, engagement rates, and ROI with comprehensive analytics.
-                    </p>
-                </div>
 
-                <!-- Feature 3 -->
-                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
-                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-shield-alt text-2xl feature-icon"></i>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-blue-200 hover:shadow-lg transition-all duration-300 hover:border-navy-500 card-hover">
+                        <div class="text-4xl mb-4">📊</div>
+                        <h3 class="text-xl font-semibold text-blue-400 mb-3">Real-time Analytics</h3>
+                        <p class="text-blue-300 leading-relaxed">
+                            Track campaign performance, engagement rates, and ROI with comprehensive analytics.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Secure Authentication</h3>
-                    <p class="text-gray-600">
-                        AWS Cognito integration ensures secure user authentication and data protection.
-                    </p>
-                </div>
 
-                <!-- Feature 4 -->
-                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
-                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-cloud text-2xl feature-icon"></i>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-blue-200 hover:shadow-lg transition-all duration-300 hover:border-navy-500 card-hover">
+                        <div class="text-4xl mb-4">🔒</div>
+                        <h3 class="text-xl font-semibold text-blue-400 mb-3">Secure Authentication</h3>
+                        <p class="text-blue-300 leading-relaxed">
+                            AWS Cognito integration ensures secure user authentication and data protection.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Serverless Architecture</h3>
-                    <p class="text-gray-600">
-                        Built on AWS Lambda, DynamoDB, and API Gateway for scalability and cost efficiency.
-                    </p>
-                </div>
 
-                <!-- Feature 5 -->
-                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
-                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-mobile-alt text-2xl feature-icon"></i>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-blue-200 hover:shadow-lg transition-all duration-300 hover:border-navy-500 card-hover">
+                        <div class="text-4xl mb-4">☁️</div>
+                        <h3 class="text-xl font-semibold text-blue-400 mb-3">Serverless Architecture</h3>
+                        <p class="text-blue-300 leading-relaxed">
+                            Built on AWS Lambda, DynamoDB, and API Gateway for scalability and cost efficiency.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Responsive Design</h3>
-                    <p class="text-gray-600">
-                        Modern React frontend with beautiful UI that works on all devices.
-                    </p>
-                </div>
 
-                <!-- Feature 6 -->
-                <div class="card-hover bg-white p-8 rounded-xl shadow-lg border border-gray-100">
-                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-comments text-2xl feature-icon"></i>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-blue-200 hover:shadow-lg transition-all duration-300 hover:border-navy-500 card-hover">
+                        <div class="text-4xl mb-4">📱</div>
+                        <h3 class="text-xl font-semibold text-blue-400 mb-3">Responsive Design</h3>
+                        <p class="text-blue-300 leading-relaxed">
+                            Modern React frontend with beautiful UI that works on all devices.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Integrated Chat</h3>
-                    <p class="text-gray-600">
-                        Built-in messaging system for seamless communication between brands and creators.
-                    </p>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-blue-200 hover:shadow-lg transition-all duration-300 hover:border-navy-500 card-hover">
+                        <div class="text-4xl mb-4">💬</div>
+                        <h3 class="text-xl font-semibold text-blue-400 mb-3">Integrated Chat</h3>
+                        <p class="text-blue-300 leading-relaxed">
+                            Built-in messaging system for seamless communication between brands and creators.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Technology Stack Section -->
-    <section id="technology" class="py-24 bg-gray-50">
+    <section id="technology" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Technology Stack</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            <div class="text-center mb-16 slide-up">
+                <h2 class="text-4xl font-bold text-blue-400 mb-4">Technology Stack</h2>
+                <p class="text-xl text-blue-300 max-w-3xl mx-auto">
                     Built with modern technologies for performance and scalability
                 </p>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Frontend -->
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                <div class="bg-blue-50 p-6 rounded-2xl shadow-sm text-center card-hover">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fab fa-react text-3xl text-blue-600"></i>
                     </div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Frontend</h3>
-                    <p class="text-sm text-gray-600">React 19.1.0, Vite, Tailwind CSS</p>
+                    <h3 class="text-lg font-semibold text-blue-400 mb-2">Frontend</h3>
+                    <p class="text-sm text-blue-300">React 19.1.0, Vite, Tailwind CSS</p>
                 </div>
 
-                <!-- Backend -->
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                <div class="bg-blue-50 p-6 rounded-2xl shadow-sm text-center card-hover">
                     <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fab fa-aws text-3xl text-green-600"></i>
                     </div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Backend</h3>
-                    <p class="text-sm text-gray-600">AWS Lambda, DynamoDB, API Gateway</p>
+                    <h3 class="text-lg font-semibold text-blue-400 mb-2">Backend</h3>
+                    <p class="text-sm text-blue-300">AWS Lambda, DynamoDB, API Gateway</p>
                 </div>
 
-                <!-- Authentication -->
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                <div class="bg-blue-50 p-6 rounded-2xl shadow-sm text-center card-hover">
                     <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-lock text-3xl text-purple-600"></i>
                     </div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Authentication</h3>
-                    <p class="text-sm text-gray-600">AWS Cognito, JWT Tokens</p>
+                    <h3 class="text-lg font-semibold text-blue-400 mb-2">Authentication</h3>
+                    <p class="text-sm text-blue-300">AWS Cognito, JWT Tokens</p>
                 </div>
 
-                <!-- Infrastructure -->
-                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                <div class="bg-blue-50 p-6 rounded-2xl shadow-sm text-center card-hover">
                     <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-cloud text-3xl text-orange-600"></i>
                     </div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Infrastructure</h3>
-                    <p class="text-sm text-gray-600">AWS CDK, CloudWatch, S3</p>
+                    <h3 class="text-lg font-semibold text-blue-400 mb-2">Infrastructure</h3>
+                    <p class="text-sm text-blue-300">AWS CDK, CloudWatch, S3</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Demo Section -->
-    <section id="demo" class="py-24 bg-white">
+    <section id="demo" class="py-20 bg-blue-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">See It In Action</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            <div class="text-center mb-16 slide-up">
+                <h2 class="text-4xl font-bold text-blue-400 mb-4">See It In Action</h2>
+                <p class="text-xl text-blue-300 max-w-3xl mx-auto">
                     Experience the platform with our interactive demo
                 </p>
             </div>
             
             <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Key Features Demo</h3>
+                <div class="slide-up">
+                    <h3 class="text-2xl font-semibold text-blue-400 mb-6">Key Features Demo</h3>
                     <div class="space-y-4">
                         <div class="flex items-start">
-                            <div class="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                            <div class="w-6 h-6 bg-navy-500 rounded-full flex items-center justify-center mr-4 mt-1">
                                 <i class="fas fa-check text-white text-xs"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-gray-900">Creator Dashboard</h4>
-                                <p class="text-gray-600">Track followers, engagement, and earnings in real-time</p>
+                                <h4 class="font-semibold text-blue-400">Creator Dashboard</h4>
+                                <p class="text-blue-300">Track followers, engagement, and earnings in real-time</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                            <div class="w-6 h-6 bg-navy-500 rounded-full flex items-center justify-center mr-4 mt-1">
                                 <i class="fas fa-check text-white text-xs"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-gray-900">Brand Matching</h4>
-                                <p class="text-gray-600">AI-powered algorithm finds perfect brand-creator matches</p>
+                                <h4 class="font-semibold text-blue-400">Brand Matching</h4>
+                                <p class="text-blue-300">AI-powered algorithm finds perfect brand-creator matches</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                            <div class="w-6 h-6 bg-navy-500 rounded-full flex items-center justify-center mr-4 mt-1">
                                 <i class="fas fa-check text-white text-xs"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-gray-900">Campaign Management</h4>
-                                <p class="text-gray-600">Track campaign performance and ROI analytics</p>
+                                <h4 class="font-semibold text-blue-400">Campaign Management</h4>
+                                <p class="text-blue-300">Track campaign performance and ROI analytics</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="w-6 h-6 bg-purple-600 rounded-full flex items-center justify-center mr-4 mt-1">
+                            <div class="w-6 h-6 bg-navy-500 rounded-full flex items-center justify-center mr-4 mt-1">
                                 <i class="fas fa-check text-white text-xs"></i>
                             </div>
                             <div>
-                                <h4 class="font-semibold text-gray-900">Secure Messaging</h4>
-                                <p class="text-gray-600">Built-in chat system for seamless communication</p>
+                                <h4 class="font-semibold text-blue-400">Secure Messaging</h4>
+                                <p class="text-blue-300">Built-in chat system for seamless communication</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="mt-8">
-                        <button class="bg-gray-400 text-white px-6 py-3 rounded-lg font-semibold cursor-not-allowed" disabled>
+                        <button class="bg-navy-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-navy-600 transition-colors cursor-not-allowed opacity-50">
                             <i class="fas fa-clock mr-2"></i>Coming Soon
                         </button>
                     </div>
                 </div>
                 
-                <div class="bg-gray-100 rounded-xl p-8">
-                    <div class="bg-white rounded-lg shadow-lg p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
-                            <div class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
-                            <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
+                        <div class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
+                        <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="h-4 bg-blue-100 rounded w-3/4"></div>
+                        <div class="h-4 bg-blue-100 rounded w-1/2"></div>
+                        <div class="h-4 bg-blue-100 rounded w-5/6"></div>
+                        <div class="h-4 bg-blue-100 rounded w-2/3"></div>
+                    </div>
+                    <div class="mt-6 grid grid-cols-2 gap-4">
+                        <div class="bg-blue-100 rounded-xl p-3">
+                            <div class="text-2xl font-bold text-blue-600">85K</div>
+                            <div class="text-sm text-blue-300">Followers</div>
                         </div>
-                        <div class="space-y-3">
-                            <div class="h-4 bg-gray-200 rounded w-3/4"></div>
-                            <div class="h-4 bg-gray-200 rounded w-1/2"></div>
-                            <div class="h-4 bg-gray-200 rounded w-5/6"></div>
-                            <div class="h-4 bg-gray-200 rounded w-2/3"></div>
-                        </div>
-                        <div class="mt-6 grid grid-cols-2 gap-4">
-                            <div class="bg-purple-100 rounded p-3">
-                                <div class="text-2xl font-bold text-purple-600">85K</div>
-                                <div class="text-sm text-gray-600">Followers</div>
-                            </div>
-                            <div class="bg-green-100 rounded p-3">
-                                <div class="text-2xl font-bold text-green-600">3.8%</div>
-                                <div class="text-sm text-gray-600">Engagement</div>
-                            </div>
+                        <div class="bg-green-100 rounded-xl p-3">
+                            <div class="text-2xl font-bold text-green-600">3.8%</div>
+                            <div class="text-sm text-green-300">Engagement</div>
                         </div>
                     </div>
                 </div>
@@ -310,29 +400,29 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-gray-50">
+    <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">About Co-nect</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            <div class="text-center mb-16 slide-up">
+                <h2 class="text-4xl font-bold text-blue-400 mb-4">About Co-nect</h2>
+                <p class="text-xl text-blue-300 max-w-3xl mx-auto">
                     A complete brand-creator matching platform designed to revolutionize influencer marketing
                 </p>
             </div>
             
             <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">The Problem</h3>
-                    <p class="text-gray-600 mb-4">
+                <div class="slide-up">
+                    <h3 class="text-2xl font-semibold text-blue-400 mb-6">The Problem</h3>
+                    <p class="text-blue-300 mb-4 leading-relaxed">
                         Finding the right creators for brand campaigns is time-consuming and often results in poor matches. 
                         Traditional methods rely on manual research and gut feelings.
                     </p>
-                    <p class="text-gray-600 mb-6">
+                    <p class="text-blue-300 mb-6 leading-relaxed">
                         Brands struggle to find creators with the right audience demographics, engagement rates, and brand alignment. 
                         Creators miss opportunities with brands that would be perfect for their content.
                     </p>
                     
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">The Solution</h3>
-                    <p class="text-gray-600">
+                    <h3 class="text-2xl font-semibold text-blue-400 mb-6">The Solution</h3>
+                    <p class="text-blue-300 leading-relaxed">
                         Co-nect uses advanced AI algorithms to match brands with creators based on multiple criteria including 
                         audience demographics, engagement rates, content style, and brand values. The platform provides real-time 
                         analytics and seamless communication tools.
@@ -340,34 +430,34 @@
                 </div>
                 
                 <div class="space-y-6">
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="bg-blue-50 p-6 rounded-2xl shadow-sm card-hover">
                         <div class="flex items-center mb-4">
-                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                                <i class="fas fa-users text-purple-600"></i>
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-users text-blue-600"></i>
                             </div>
-                            <h4 class="font-semibold text-gray-900">For Brands</h4>
+                            <h4 class="font-semibold text-blue-400">For Brands</h4>
                         </div>
-                        <p class="text-gray-600">Find creators with the perfect audience match, track campaign performance, and maximize ROI.</p>
+                        <p class="text-blue-300">Find creators with the perfect audience match, track campaign performance, and maximize ROI.</p>
                     </div>
                     
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="bg-blue-50 p-6 rounded-2xl shadow-sm card-hover">
                         <div class="flex items-center mb-4">
                             <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
                                 <i class="fas fa-star text-green-600"></i>
                             </div>
-                            <h4 class="font-semibold text-gray-900">For Creators</h4>
+                            <h4 class="font-semibold text-blue-400">For Creators</h4>
                         </div>
-                        <p class="text-gray-600">Connect with brands that align with your content, grow your audience, and increase earnings.</p>
+                        <p class="text-blue-300">Connect with brands that align with your content, grow your audience, and increase earnings.</p>
                     </div>
                     
-                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="bg-blue-50 p-6 rounded-2xl shadow-sm card-hover">
                         <div class="flex items-center mb-4">
-                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                                <i class="fas fa-chart-line text-blue-600"></i>
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-line text-purple-600"></i>
                             </div>
-                            <h4 class="font-semibold text-gray-900">Analytics & Insights</h4>
+                            <h4 class="font-semibold text-blue-400">Analytics & Insights</h4>
                         </div>
-                        <p class="text-gray-600">Real-time data on engagement, audience growth, and campaign performance.</p>
+                        <p class="text-blue-300">Real-time data on engagement, audience growth, and campaign performance.</p>
                     </div>
                 </div>
             </div>
@@ -375,34 +465,34 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-24 gradient-bg text-white">
+    <section class="py-20 bg-gradient-navy text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl font-bold mb-6">Ready to Get Started?</h2>
-            <p class="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">
-                Join the future of brand-creator partnerships. Deploy your own instance or contribute to the project.
+            <p class="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+                Join the future of brand-creator partnerships. Experience the power of AI-driven matching.
             </p>
             <div class="flex justify-center">
-                <a href="https://github.com/your-username/co-nect/blob/main/README.md" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-                    <i class="fas fa-book mr-2"></i>Read Documentation
-                </a>
+                <button class="bg-white text-navy-500 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors cursor-not-allowed opacity-50">
+                    <i class="fas fa-clock mr-2"></i>Demo Coming Soon
+                </button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-navy-600 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-2xl font-bold gradient-text mb-4">Co-nect</h3>
-                    <p class="text-gray-400">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-4">Co-nect</h3>
+                    <p class="text-blue-100">
                         Connecting brands with creators through intelligent matching and powerful analytics.
                     </p>
                 </div>
                 
                 <div>
-                    <h4 class="font-semibold mb-4">Features</h4>
-                    <ul class="space-y-2 text-gray-400">
+                    <h4 class="font-semibold mb-4 text-blue-400">Features</h4>
+                    <ul class="space-y-2 text-blue-100">
                         <li><a href="#features" class="hover:text-white transition-colors">AI Matching</a></li>
                         <li><a href="#features" class="hover:text-white transition-colors">Analytics</a></li>
                         <li><a href="#features" class="hover:text-white transition-colors">Authentication</a></li>
@@ -411,8 +501,8 @@
                 </div>
                 
                 <div>
-                    <h4 class="font-semibold mb-4">Technology</h4>
-                    <ul class="space-y-2 text-gray-400">
+                    <h4 class="font-semibold mb-4 text-blue-400">Technology</h4>
+                    <ul class="space-y-2 text-blue-100">
                         <li><a href="#technology" class="hover:text-white transition-colors">React</a></li>
                         <li><a href="#technology" class="hover:text-white transition-colors">AWS Lambda</a></li>
                         <li><a href="#technology" class="hover:text-white transition-colors">DynamoDB</a></li>
@@ -421,19 +511,19 @@
                 </div>
                 
                 <div>
-                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <h4 class="font-semibold mb-4 text-blue-400">Connect</h4>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="#" class="text-blue-100 hover:text-white transition-colors">
                             <i class="fab fa-twitter text-xl"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="#" class="text-blue-100 hover:text-white transition-colors">
                             <i class="fab fa-linkedin text-xl"></i>
                         </a>
                     </div>
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <div class="border-t border-navy-500 mt-8 pt-8 text-center text-blue-100">
                 <p>&copy; 2024 Co-nect. Built with ❤️ for the creator economy.</p>
             </div>
         </div>
